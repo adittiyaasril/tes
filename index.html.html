@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Slide A20</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  </head>
+  <body>
+  <div class="container">
+    <h3>BERGABUNGLAH BERSAMA KAMI</h3>
+    <div class="slides">
+      <div class="slide">
+        <img src="img/gambar1.jpg" alt="">
+        <div class="content">
+        <h4>Bank Bankan</h4>
+            <p>Bank Pilihan Utama, Kuat, Terpercaya, Unggul Bersaing, Kontributif.</p>
+        </div>
+
+      </div>
+      <div class="slide">
+        <img src="img/gambar2.jpg" alt="">
+        <div class="content">
+        <h4>Kemudahan Bertransaksi</h4>
+            <p>Dapatkan keuntungan dengan mudahnya akses dan bertransaksi di Bank Bankan.</p>
+        </div>
+      </div>
+      <div class="slide">
+        <img src="img/gambar3.jpg" alt="">
+        <div class="content">
+        <h4>Pelayanan Terbaik</h4>
+            <p>Melayani nasabah dengan tulus dan sepenuh hati.</p>
+        </div>
+      </div>
+      <div class="navigation">
+        <a class = "prev" onclick = "plusSlides(-1)">&#10094;</a>
+        <a class = "next" onclick = "plusSlides(-1)">&#10095;</a>
+      </div>
+    </div>
+  </div>
+
+    <script>
+      var slideIndex = 1;
+      showSlides(slideIndex);
+
+      function plusSlides(n) {
+        showSlides(slideIndex += n);
+      }
+
+      function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("slide");
+        if (n > slides.length)
+        {
+          slideIndex = 1;
+        }
+        if (n < 1)
+        {
+          slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++)
+        {
+          slides[i].style.display = "none";
+        }
+        slides[slideIndex-1].style.display = "block";
+      }
+    </script>
+
+  </body>
+</html>

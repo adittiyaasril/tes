@@ -1,0 +1,132 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body{
+  overflow-x: hidden;
+}
+
+nav .left img{
+  width: 90px;
+}
+
+nav{
+  display: flex;
+  justify-content: space-between;
+  min-height: 80px;
+  align-items: center;
+  border-bottom: 1px solid #DCDCDC;
+  padding: 0px 5% 0px 5%;
+}
+
+nav .right a{
+  text-decoration: none;
+  color: black;
+}
+
+.slides{
+  width: 100%;
+  position: relative;
+  padding-top: 5px;
+}
+
+.slides .slide{
+  display: none;
+}
+
+.slides .slide img{
+  width: 100%;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.slides .navigation{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.slides .navigation .prev, .slides .navigation .next{
+  cursor: pointer;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 20px;
+  color: white;
+  background: rgba(0,0,0,0.2);
+  user-select: none;
+  transition: 0.6s ease;
+}
+
+.slides .navigation .prev:hover, .slides .navigation .next:hover{
+  background: rgba(0,0,0,1);
+}
+
+@keyframes fade {
+  from{opacity: 0.3}
+  to {opacity: 1}
+}
+
+@media (max-width: 992px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 18px;
+    padding: 13px;
+  }
+}
+
+@media (max-width: 768px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 576px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 12px;
+    padding: 7px;
+  }
+}
+
+@media (max-width: 360px){
+  .slides .navigation .prev, .slides .navigation .next{
+    font-size: 11px;
+    padding: 6px;
+  }
+}
+.container {
+  padding-bottom: 15px;
+  margin: 30px;
+  position: relative;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.container h3 {
+  border-bottom: 3px solid #c0a080;
+  padding:5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.container .content {
+  position: absolute; 
+  bottom: 0; 
+  background: rgb(0, 0, 0); 
+  background: rgba(0, 0, 0, 0.5); 
+  color: #f1f1f1; 
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+.content h4 {
+  text-shadow: 3px 2px 1px black;
+}
+.content p {
+  color: skyblue;
+  text-shadow: 3px 2px 5px black;
+}
